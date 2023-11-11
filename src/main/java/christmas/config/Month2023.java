@@ -30,8 +30,8 @@ public enum Month2023 {
         return maxDays;
     }
 
-    public static boolean isDayInRange(int order, int day) {
-        Month2023 month = Month2023.values()[order - 1];
+    public static boolean isDayInRange(int monthOrder, int day) {
+        Month2023 month = Month2023.values()[monthOrder - 1];
         return month.getMinDays() <= day && day <= month.getMaxDays();
     }
 }
