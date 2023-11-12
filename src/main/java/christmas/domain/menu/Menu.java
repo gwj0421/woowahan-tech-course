@@ -36,5 +36,14 @@ public enum Menu {
     public int getPrice() {
         return price;
     }
+
+    public static int getPriceByMenuName(String searchTarget) {
+        for (Menu menu : values()) {
+            if (menu.getName().equals(searchTarget)) {
+                return menu.getPrice();
+            }
+        }
+        return 0;
+    }
 }
 
