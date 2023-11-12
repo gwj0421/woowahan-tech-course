@@ -36,4 +36,20 @@ class OrderedMenuTest {
         Assertions.assertThatCode(() -> new OrderedMenu(order)).doesNotThrowAnyException();
     }
 
+    @DisplayName("입력된 메뉴들의 총 가격을 계산하여 계산 결과를 리턴")
+    @Test
+    void Should_ReturnTotalPrice_When_MenuIsExists() {
+        // given
+        HashMap<String, Integer> order = new HashMap<>();
+        order.put("시저샐러드",1);
+        order.put("양송이수프",2);
+        int totalActualPrice = 8000 + 6000 * 2;
+
+        // when
+        OrderedMenu orderedMenu = new OrderedMenu(order);
+
+        // then
+        Assertions.assertThat(orderedMenu.getTotalPrice()).isEqualTo(totalActualPrice);
+    }
+
 }
