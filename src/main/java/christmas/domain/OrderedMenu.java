@@ -1,5 +1,6 @@
 package christmas.domain;
 
+import christmas.domain.menu.Menu;
 import christmas.validation.DomainValidation;
 
 import java.util.Map;
@@ -14,5 +15,14 @@ public class OrderedMenu {
 
     private static void validate(Map<String, Integer> order) {
         DomainValidation.validateMenuExistsOrNot(order);
+    }
+
+    public int getTotalPrice() {
+        int totalPrice = 0;
+        for (String menu : order.keySet()) {
+            totalPrice += Menu.getPriceByMenuName(menu) * order.get(menu);
+        }
+
+        return totalPrice;
     }
 }
