@@ -1,8 +1,8 @@
 package christmas.view;
 
 import camp.nextstep.edu.missionutils.Console;
-import christmas.domain.Date;
-import christmas.domain.OrderedMenu;
+import christmas.domain.calender.Date;
+import christmas.domain.menu.OrderedMenu;
 import christmas.util.ConvertUtil;
 import christmas.validation.ViewValidation;
 

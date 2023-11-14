@@ -1,6 +1,6 @@
 package christmas.domain.event;
 
-import christmas.domain.Date;
+import christmas.domain.calender.Date;
 
 public enum EventType {
     CHRISTMAS_D_DAY_DISCOUNT_EVENT("크리스마스 디데이 할인", new Date(12, 1), new Date(12, 25)),

@@ -1,6 +1,9 @@
-package christmas.domain.event;
+package christmas.domain.event.giveaway;
 
-import christmas.domain.OrderedMenu;
+import christmas.domain.event.EventType;
+import christmas.domain.menu.OrderedMenu;
+import christmas.domain.event.giveaway.GiveawayByTotalPurchaseAmountEvent;
+import christmas.domain.event.giveaway.GiveawayEvent;
 import christmas.domain.menu.Menu;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

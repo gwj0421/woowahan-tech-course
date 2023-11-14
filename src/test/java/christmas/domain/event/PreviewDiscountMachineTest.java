@@ -1,9 +1,8 @@
 package christmas.domain.event;
 
-import christmas.domain.Date;
-import christmas.domain.EventCalender;
-import christmas.domain.OrderedMenu;
-import christmas.domain.PreviewResult;
+import christmas.domain.calender.Date;
+import christmas.domain.calender.EventCalender;
+import christmas.domain.menu.OrderedMenu;
 import christmas.domain.menu.Menu;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

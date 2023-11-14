@@ -1,6 +1,6 @@
 package christmas.view;
 
-import christmas.domain.Date;
+import christmas.domain.calender.Date;
 import christmas.domain.event.EventType;
 import christmas.domain.menu.Menu;
 

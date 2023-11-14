@@ -1,6 +1,5 @@
-package christmas.domain;
+package christmas.domain.event;
 
-import christmas.domain.event.EventType;
 import christmas.domain.menu.Menu;
 
 import java.util.Map;

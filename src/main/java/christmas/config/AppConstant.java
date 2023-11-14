@@ -1,6 +1,6 @@
 package christmas.config;
 
-import christmas.domain.Date;
+import christmas.domain.calender.Date;
 
 import java.util.Set;
 

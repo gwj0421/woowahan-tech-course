@@ -1,4 +1,4 @@
-package christmas.domain;
+package christmas.domain.calender;
 
 import christmas.config.Month2023Detail;
 import christmas.domain.week.Week;

@@ -1,6 +1,7 @@
-package christmas.domain.event;
+package christmas.domain.event.discount;
 
-import christmas.domain.Date;
+import christmas.domain.calender.Date;
+import christmas.domain.event.EventType;
 
 import java.util.Map;
 

@@ -1,6 +1,7 @@
-package christmas.domain.event;
+package christmas.domain.event.giveaway;
 
-import christmas.domain.OrderedMenu;
+import christmas.domain.menu.OrderedMenu;
+import christmas.domain.event.EventType;
 import christmas.domain.menu.Menu;
 
 import java.util.Collections;

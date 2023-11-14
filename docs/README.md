@@ -33,6 +33,12 @@
 > 1. 날짜
 > 2. 주문할 메뉴와 개수
 
+날짜는 자주 사용되기 때문에 format을 Date 객체로 미리 지정한 다음 사용하였다.
+
+주문 메뉴와 개수 또한 format을 OrderedMenu 객체로 설정하였다.
+
+
+
 > 출력
 > 3. 주문 메뉴
 > 4. 할인 전 총주문 금액
@@ -55,18 +61,20 @@ Customer객체를 둔 이유는 이벤트의 목표인 1월 이벤트에 재참�
 
 그리고 예외 처리 사항은 아래와 같다.
 
-| 경우                                  | ExceptionClass | 에러 메세지 | 후처리 |
-|-------------------------------------|---------------|------------|--------|
-| 날짜가 1이상 31 이하의 숫자가 아닌 경우            | IllegalArgumentException | "[ERROR] 유효하지 않은 날짜입니다. 다시 입력해 주세요." | 다시 입력 |
-| 날짜가 숫자가 아닌 경우                       | NumberFormatException | "[ERROR] 숫자가 아닌 문자가 입력되었습니다. 다시 입력해 주세요." | 다시 입력 |
-| 날짜가 공백 혹은 빈 문자열, null이 입력됬을 경우      | NullPointerException | "[ERROR] 공백 혹은 빈 문자열, null이 입력되었습니다. 다시 입력해 주세요." | 다시 입력 |
-| 입력된 메뉴 혹은 숫자가 공백 혹은 빈 문자열, null일 경우 | IllegalArgumentException | "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요." | 다시 입력 |
-| 메뉴판에 없는 메뉴 입력할  경우                  | IllegalArgumentException | "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요." | 다시 입력 |
-| 메뉴의 개수가 숫자가 아닌 경우                   | NumberFormatException | "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요." | 다시 입력 |
-| 메뉴의 개수가 0이하 숫자인 경우                  | IllegalArgumentException | "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요." | 다시 입력 |
-| 메뉴 형식(음식1-숫자,음식2-숫자)에 맞지 않는 경우      | IllegalArgumentException | "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요." | 다시 입력 |
-| 중복 메뉴 입력할 경우                        | IllegalArgumentException | "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요." | 다시 입력 |
-| 한번에 21개 이상의 메뉴가 입력됬을 경우             | IllegalArgumentException | "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요." | 다시 입력 |
+| 경우                                  | ExceptionClass | 에러 메세지                                     | 후처리 |
+|-------------------------------------|---------------|--------------------------------------------|--------|
+| 날짜가 1이상 31 이하의 숫자가 아닌 경우            | IllegalArgumentException | "[ERROR] 유효하지 않은 날짜입니다. 다시 입력해 주세요."       | 다시 입력 |
+| 날짜가 숫자가 아닌 경우                       | NumberFormatException | "[ERROR] 유효하지 않은 숫자입니다. 다시 입력해 주세요."       | 다시 입력 |
+| 날짜가 공백 혹은 빈 문자열이 입력됬을 경우            | IllegalArgumentException | "[ERROR] 공백 혹은 빈 문자가 입력되었습니다. 다시 입력해 주세요." | 다시 입력 |
+| 날짜에 null이 입력됬을 경우                   | NullPointerException | "[ERROR] Null이 입력되었습니다. 다시 입력해 주세요."       | 다시 입력 |
+| 입력된 메뉴 혹은 숫자가 공백 혹은 빈 문자열이 입력됬을 경우  | IllegalArgumentException | "[ERROR] 공백 혹은 빈 문자가 입력되었습니다. 다시 입력해 주세요." | 다시 입력 |
+| 입력된 메뉴 혹은 숫자에 null이 입력됬을 경우         | NullPointerException | "[ERROR] Null이 입력되었습니다. 다시 입력해 주세요."       | 다시 입력 |
+| 메뉴판에 없는 메뉴 입력할  경우                  | IllegalArgumentException | "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요."       | 다시 입력 |
+| 메뉴의 개수가 숫자가 아닌 경우                   | NumberFormatException | "[ERROR] 유효하지 않은 숫자입니다. 다시 입력해 주세요."       | 다시 입력 |
+| 메뉴의 개수가 0이하 숫자인 경우                  | IllegalArgumentException | "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요."       | 다시 입력 |
+| 메뉴 형식(음식1-숫자,음식2-숫자)에 맞지 않는 경우      | IllegalArgumentException | "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요."       | 다시 입력 |
+| 중복 메뉴 입력할 경우                        | IllegalArgumentException | "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요."       | 다시 입력 |
+| 한번에 21개 이상의 메뉴가 입력됬을 경우             | IllegalArgumentException | "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요."       | 다시 입력 |
 
 
 ---

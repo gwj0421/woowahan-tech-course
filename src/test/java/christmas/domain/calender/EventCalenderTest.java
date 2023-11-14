@@ -1,5 +1,7 @@
-package christmas.domain;
+package christmas.domain.calender;
 
+import christmas.domain.calender.Date;
+import christmas.domain.calender.EventCalender;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

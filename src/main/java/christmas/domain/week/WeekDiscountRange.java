@@ -1,6 +1,6 @@
 package christmas.domain.week;
 
-import christmas.domain.Date;
+import christmas.domain.calender.Date;
 
 import java.util.Arrays;
 

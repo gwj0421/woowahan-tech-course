@@ -1,7 +1,8 @@
-package christmas.domain.event;
+package christmas.domain.event.discount;
 
-import christmas.domain.Date;
-import christmas.domain.OrderedMenu;
+import christmas.domain.calender.Date;
+import christmas.domain.menu.OrderedMenu;
+import christmas.domain.event.EventType;
 import christmas.domain.menu.Menu;
 import christmas.domain.menu.MenuGroup;
 import christmas.domain.week.WeekDiscountRange;

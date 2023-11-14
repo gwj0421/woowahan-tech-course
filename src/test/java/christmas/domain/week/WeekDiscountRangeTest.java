@@ -1,6 +1,6 @@
 package christmas.domain.week;
 
-import christmas.domain.Date;
+import christmas.domain.calender.Date;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

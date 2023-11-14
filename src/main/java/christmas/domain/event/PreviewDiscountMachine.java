@@ -1,9 +1,11 @@
 package christmas.domain.event;
 
-import christmas.domain.Date;
-import christmas.domain.EventCalender;
-import christmas.domain.OrderedMenu;
-import christmas.domain.PreviewResult;
+import christmas.domain.calender.Date;
+import christmas.domain.calender.EventCalender;
+import christmas.domain.menu.OrderedMenu;
+import christmas.domain.event.discount.*;
+import christmas.domain.event.giveaway.GiveawayByTotalPurchaseAmountEvent;
+import christmas.domain.event.giveaway.GiveawayEvent;
 import christmas.domain.menu.Menu;
 
 import java.util.Collections;

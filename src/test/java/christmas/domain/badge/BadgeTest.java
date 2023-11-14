@@ -1,5 +1,6 @@
-package christmas.domain;
+package christmas.domain.badge;
 
+import christmas.domain.badge.Badge;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;

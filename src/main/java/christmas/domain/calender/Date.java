@@ -1,4 +1,4 @@
-package christmas.domain;
+package christmas.domain.calender;
 
 import christmas.domain.week.Week;
 import christmas.validation.DomainValidation;

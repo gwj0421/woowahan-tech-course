@@ -1,7 +1,10 @@
-package christmas.domain.event;
+package christmas.domain.event.discount;
 
-import christmas.domain.Date;
-import christmas.domain.EventCalender;
+import christmas.domain.calender.Date;
+import christmas.domain.calender.EventCalender;
+import christmas.domain.event.EventType;
+import christmas.domain.event.discount.DiscountEvent;
+import christmas.domain.event.discount.SpecialDiscountEvent;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

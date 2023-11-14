@@ -1,6 +1,7 @@
-package christmas.domain;
+package christmas.domain.event;
 
 import christmas.domain.event.EventType;
+import christmas.domain.event.PreviewResult;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
