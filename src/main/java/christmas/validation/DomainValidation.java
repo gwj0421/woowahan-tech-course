@@ -1,10 +1,13 @@
 package christmas.validation;
 
-import christmas.config.Month2023;
+import christmas.config.Month2023Detail;
 import christmas.domain.menu.MenuGroup;
 import christmas.view.ErrorMessage;
 
 import java.util.Map;
+
+import static christmas.config.AppConstant.MAX_ORDER_CNT;
+import static christmas.config.AppConstant.MIN_ORDER_CNT;
 
 public class DomainValidation {
     private DomainValidation() {
@@ -43,5 +46,20 @@ public class DomainValidation {
         if (totalCnt < MIN_ORDER_CNT || MAX_ORDER_CNT < totalCnt) {
             throw new IllegalArgumentException(ErrorMessage.MENU_ERROR_MESSAGE.getMessage());
         }
+
     }
+
+    public static void validateMonthRange(final int monthOrder) {
+        if (monthOrder < 1 || monthOrder > 12) {
+            throw new IllegalArgumentException(ErrorMessage.DEVELOP_ERROR_MESSAGE.getMessage());
+        }
+    }
+
+    public static void validateMoneyIsNegative(final int actualPayAmount) {
+        if (actualPayAmount < 0) {
+            throw new IllegalArgumentException(ErrorMessage.DEVELOP_ERROR_MESSAGE.getMessage());
+        }
+    }
+
+
 }
