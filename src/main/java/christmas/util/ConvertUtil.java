@@ -43,4 +43,17 @@ public class ConvertUtil {
 
         order.put(menu, cnt);
     }
+
+    public static final Map<Menu, Integer> convertKeyString2Menu(final Map<String, Integer> order) {
+        Map<Menu, Integer> result = new EnumMap<>(Menu.class);
+        try {
+            for (Map.Entry<String, Integer> orderEntry : order.entrySet()) {
+                result.put(Menu.getMenuByMenuName(orderEntry.getKey()), orderEntry.getValue());
+            }
+        } catch (NoSuchElementException e) {
+            throw new IllegalArgumentException(ErrorMessage.MENU_ERROR_MESSAGE.getMessage());
+        }
+
+        return result;
+    }
 }
