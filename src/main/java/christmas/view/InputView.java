@@ -16,33 +16,33 @@ public class InputView {
     }
 
     public static void helloCustomer() {
-        System.out.printf(GREETING_MESSAGE, TARGET_MONTH.getNum());
+        System.out.printf(GREETING_MESSAGE, TARGET_MONTH);
     }
 
     public static Date inputVisitDate() {
-        System.out.printf(REQUEST_VISIT_DATE_MESSAGE, TARGET_MONTH.getNum());
+        System.out.printf(REQUEST_VISIT_DATE_MESSAGE, TARGET_MONTH);
         return readDateWhileVerifying();
     }
 
     private static Date readDateWhileVerifying() {
         try {
-            String inputContent = Console.readLine();
+            String inputContent = Console.readLine().trim();
             ViewValidation.validateEmptyOrSpaceOrNull(inputContent);
-            return new Date(TARGET_MONTH.getNum(), ConvertUtil.convertString2Int(inputContent));
+            return new Date(TARGET_MONTH, ConvertUtil.convertString2Int(inputContent));
         } catch (NullPointerException | IllegalArgumentException e) {
             System.out.println(e.getMessage());
             return readDateWhileVerifying();
         }
     }
 
-    public static OrderedMenu inputIOrderMenuAndCnt() {
+    public static OrderedMenu inputOrderMenuAndCnt() {
         System.out.println(ORDER_MENU_AND_CNT_MESSAGE);
         return readOrderWhileVerifying();
     }
 
     private static OrderedMenu readOrderWhileVerifying() {
         try {
-            String inputContent = Console.readLine();
+            String inputContent = Console.readLine().trim();
             ViewValidation.validateEmptyOrSpaceOrNull(inputContent);
             return new OrderedMenu(ConvertUtil.convertString2Map(inputContent));
         } catch (NullPointerException | IllegalArgumentException e) {

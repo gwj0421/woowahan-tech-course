@@ -1,5 +1,9 @@
 package christmas.domain.menu;
 
+import christmas.view.ErrorMessage;
+
+import java.util.Arrays;
+
 public enum Menu {
     // Appetizer
     MUSHROOM_SOUP("양송이수프", 6000),
@@ -24,7 +28,7 @@ public enum Menu {
     private final String name;
     private final int price;
 
-    Menu(String name, int price) {
+    Menu(final String name, final int price) {
         this.name = name;
         this.price = price;
     }
@@ -37,13 +41,11 @@ public enum Menu {
         return price;
     }
 
-    public static int getPriceByMenuName(String searchTarget) {
-        for (Menu menu : values()) {
-            if (menu.getName().equals(searchTarget)) {
-                return menu.getPrice();
-            }
-        }
-        return 0;
+    public static Menu getMenuByMenuName(final String menuName) {
+        return Arrays.stream(values())
+                .filter(menu -> menu.getName().equals(menuName))
+                .findAny()
+                .orElseThrow(() -> new IllegalArgumentException(ErrorMessage.MENU_ERROR_MESSAGE.name()));
     }
 }
 
