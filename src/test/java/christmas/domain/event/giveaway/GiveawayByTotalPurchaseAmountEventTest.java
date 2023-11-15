@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class GiveawayByTotalPurchaseAmountEventTest {
     private static Map<String, Integer> order;
     private static Map<EventType, Integer> benefitDetail;
-    private static GiveawayEvent giveawayEvent;
+    private static GiveawayEvent<Integer> giveawayEvent;
 
     @BeforeEach
     void setUp() {
